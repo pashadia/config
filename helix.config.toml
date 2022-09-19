@@ -1,1 +1,26 @@
-theme = "bogster"
+theme = "meliora"
+
+[keys.normal]
+tab = "command_mode"
+A-P = "command_palette"
+"space" = { "space" = ":write", c = ":buffer-close", q = ":quit" }
+
+[keys.insert]
+"," = { "," = "normal_mode",  w = ":write"  }
+
+[editor]
+indent-guides.render = true
+cursorline = true
+color-modes = true
+line-number = "relative"
+
+[editor.statusline]
+left = ["mode", "spacer", "spinner"]
+center = ["file-name", "diagnostics",]
+right = [ "selections", "position", "spacer", "position-percentage", "spacer", "file-type"]
+
+[editor.whitespace]
+# render = { newline = "all" }
+
+[editor.lsp]
+display-messages = true
