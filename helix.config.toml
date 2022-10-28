@@ -3,10 +3,13 @@ theme = "meliora"
 [keys.normal]
 tab = "command_mode"
 A-P = "command_palette"
-"space" = { "space" = ":write", c = ":buffer-close", q = ":quit" }
+"space" = { "space" = "command_mode", c = ":buffer-close", t = ":write", q = ":quit" }
+"C-/" = "toggle_comments"
+"ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
 
 [keys.insert]
 "," = { "," = "normal_mode",  w = ":write"  }
+"C-/" = "toggle_comments"
 
 [editor]
 indent-guides.render = true
