@@ -1,4 +1,4 @@
-theme = "meliora"
+theme = "monokai_pro_ristretto"
 
 [keys.normal]
 tab = "command_mode"
