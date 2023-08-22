@@ -5,27 +5,42 @@ tab = "command_mode"
 A-P = "command_palette"
 "space" = { "space" = "command_mode", c = ":buffer-close", t = ":write", q = ":quit" }
 "C-/" = "toggle_comments"
-"ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
 
 [keys.insert]
-"," = { "," = "normal_mode",  w = ":write"  }
 "C-/" = "toggle_comments"
+"C-w" = "no_op"
+"C-h" = "no_op"
+"C-k" = "no_op"
+"C-d" = "no_op"
+"C-j" = "no_op"
+"A-d" = "no_op"
 
 [editor]
-indent-guides.render = true
+rulers = [80, 120]
 cursorline = true
 color-modes = true
-line-number = "relative"
+completion-replace = false
+# line-number = "relative"
 bufferline = "always"
 auto-save = true
 
 [editor.statusline]
-left = ["mode", "spacer", "spinner"]
-center = ["file-name", "diagnostics",]
-right = [ "selections", "position", "spacer", "position-percentage", "spacer", "file-type"]
+left = ["mode", "spacer", "spinner", "file-name", "file-modification-indicator"]
+center = ["diagnostics"]
+right = [ "version-control", "spacer", "selections", "position", "spacer", "position-percentage", "spacer", "file-type"]
 
-[editor.whitespace]
-# render = { newline = "all" }
+[editor.indent-guides]
+render = true
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.file-picker]
+hidden = false
+
+[editor.gutters.line-numbers]
+min-width = 4
