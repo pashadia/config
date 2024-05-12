@@ -1,10 +1,16 @@
-theme = "monokai_pro_ristretto"
+theme = "starlight"
 
 [keys.normal]
 tab = "command_mode"
 A-P = "command_palette"
-"space" = { "space" = "command_mode", c = ":buffer-close", t = ":write", q = ":quit" }
+"space" = { "space" = "command_mode", c = ":buffer-close", t = ":write", T = ":write-all", q = ":quit" }
 "C-/" = "toggle_comments"
+"C-i" = "jump_forward"
+"A-g" = ":reset-diff-change"
+"C-r" = ":reload-all"
+h = "goto_word"
+X = "select_line_above"
+x = "select_line_below"
 
 [keys.insert]
 "C-/" = "toggle_comments"
@@ -20,9 +26,14 @@ rulers = [80, 120]
 cursorline = true
 color-modes = true
 completion-replace = false
-# line-number = "relative"
 bufferline = "always"
 auto-save = true
+jump-label-alphabet = "eirsaotndhfuywgmplc,x.vkbjz/"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
 
 [editor.statusline]
 left = ["mode", "spacer", "spinner", "file-name", "file-modification-indicator"]
@@ -42,5 +53,3 @@ enable = true
 [editor.file-picker]
 hidden = false
 
-[editor.gutters.line-numbers]
-min-width = 4
