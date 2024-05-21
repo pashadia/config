@@ -3,9 +3,8 @@ theme = "starlight"
 [keys.normal]
 tab = "command_mode"
 A-P = "command_palette"
-"space" = { "space" = "command_mode", c = ":buffer-close", t = ":write", T = ":write-all", q = ":quit" }
+"space" = { "space" = "command_mode", c = ":buffer-close", t = ":write", T = ":write-all", q = ":quit", e = "hover" }
 "C-/" = "toggle_comments"
-"C-i" = "jump_forward"
 "A-g" = ":reset-diff-change"
 "C-r" = ":reload-all"
 h = "goto_word"
