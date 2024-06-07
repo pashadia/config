@@ -10,6 +10,8 @@ A-P = "command_palette"
 h = "goto_word"
 X = "select_line_above"
 x = "select_line_below"
+"[" = { s = "select_prev_sibling" }
+"]" = { s = "select_next_sibling" }
 
 [keys.insert]
 "C-/" = "toggle_comments"
@@ -21,6 +23,7 @@ x = "select_line_below"
 "A-d" = "no_op"
 
 [editor]
+shell = ["zsh", "-c"]
 rulers = [80, 120]
 cursorline = true
 color-modes = true
@@ -51,4 +54,4 @@ enable = true
 
 [editor.file-picker]
 hidden = false
-
+git-ignore = false
