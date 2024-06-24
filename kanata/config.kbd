@@ -18,12 +18,12 @@
 
 
 (defalias
-	m (chord base m)
-	, (chord base ,)
+	m (chord base-chords m)
+	, (chord base-chords ,)
 	capsnav (tap-hold 200 200 bspc (layer-while-held nav))
 )
 
-(defchords base 500
+(defchords base-chords 500
 	(m) m
 	(,) ,
 	(m ,) ret
