@@ -1,0 +1,38 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  grv             1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab             q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps            a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft            z    x    c    v    b    n    m    ,    .    /    rsft
+)
+
+(deflayer base
+  _               _    _    _    _    _    _    _    _    _    _    _    _    _
+  _               _    _    _    _    _    _    _    _    _    _    _    _    _
+  @capsnav        _    _    _    _    _    _    _    _    _    _    _    _
+  _               _    _    _    _    _    _    @m   @,   _    _    _
+)
+
+
+(defalias
+	m (chord base m)
+	, (chord base ,)
+	capsnav (tap-hold 200 200 bspc (layer-while-held nav))
+)
+
+(defchords base 500
+	(m) m
+	(,) ,
+	(m ,) ret
+)
+
+
+(deflayermap (nav)
+  i up
+  j left
+  k down
+  l right
+)
