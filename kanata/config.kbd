@@ -16,6 +16,40 @@
   _               _    _    _    _    _    _    @m   @,   _    _    _
 )
 
+(defoverrides
+  (1) (lsft 1)
+  (2) (lsft 2)
+  (3) (lsft 3)
+  (4) (lsft 4)
+  (5) (lsft 5)
+  (6) (lsft 6)
+  (7) (lsft 7)
+  (8) (lsft 8)
+  (9) (lsft 9)
+  (0) (lsft 0)
+
+  (lsft 1) (1)
+  (lsft 2) (2)
+  (lsft 3) (3)
+  (lsft 4) (4)
+  (lsft 5) (5)
+  (lsft 6) (6)
+  (lsft 7) (7)
+  (lsft 8) (8)
+  (lsft 9) (9)
+  (lsft 0) (0)
+
+  (rsft 1) (1)
+  (rsft 2) (2)
+  (rsft 3) (3)
+  (rsft 4) (4)
+  (rsft 5) (5)
+  (rsft 6) (6)
+  (rsft 7) (7)
+  (rsft 8) (8)
+  (rsft 9) (9)
+  (rsft 0) (0)
+)
 
 (defalias
 	m (chord base-chords m)
@@ -35,4 +69,6 @@
   j left
   k down
   l right
+  u home
+  o end
 )
