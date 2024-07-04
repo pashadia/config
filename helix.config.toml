@@ -3,7 +3,7 @@ theme = "starlight"
 [keys.normal]
 tab = "command_mode"
 A-P = "command_palette"
-"space" = { "space" = "command_mode", c = ":buffer-close", t = ":write", T = ":write-all", q = ":quit", e = "hover" }
+"space" = { "space" = "command_mode", c = ":buffer-close", t = ":write", T = ":write-all", q = ":quit", e = "hover", F = "file_picker_in_current_buffer_directory" }
 "C-/" = "toggle_comments"
 "A-g" = ":reset-diff-change"
 "C-r" = ":reload-all"
@@ -27,7 +27,7 @@ shell = ["zsh", "-c"]
 rulers = [80, 120]
 cursorline = true
 color-modes = true
-completion-replace = true
+completion-replace = false
 bufferline = "always"
 auto-save = true
 jump-label-alphabet = "eirsaotndhfuywgmplc,x.vkbjz/"
@@ -53,5 +53,5 @@ display-inlay-hints = true
 enable = true
 
 [editor.file-picker]
-hidden = false
-git-ignore = false
+hidden = true
+git-ignore = true

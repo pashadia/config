@@ -1,14 +1,24 @@
 [[language]]
 name = "python"
 auto-format = true
-language-servers = [ "pyright", "ruff" ]
-formatter = { command = "ruff", args = ["format"]}
+language-servers = [
+  {name = "pyright", except-features = ["format"]},
+  {name = "ruff"}
+]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
 
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "basic"
 
 [language-server.ruff]
 command = "ruff-lsp"
+
+[language-server.ruff.config] 
+documentFormatting = true
+settings.run = "onSave"
 
 
 [[language]]
