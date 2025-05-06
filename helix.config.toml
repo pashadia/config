@@ -23,7 +23,6 @@ x = "select_line_below"
 "A-d" = "no_op"
 
 [editor]
-shell = ["zsh", "-c"]
 rulers = [80, 120]
 cursorline = true
 color-modes = true
@@ -53,5 +52,4 @@ display-inlay-hints = true
 enable = true
 
 [editor.file-picker]
-hidden = true
-git-ignore = true
+hidden = false
